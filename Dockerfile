@@ -10,7 +10,9 @@ RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 # Install additional packages
-RUN apt-get update && \
+RUN wget -qO - https://apt.corretto.aws/corretto.key | apt-key add - && \
+    echo "deb https://apt.corretto.aws stable main" | tee /etc/apt/sources.list.d/corretto.list && \
+    apt-get update && \
     apt-get -y install jq && \
     pip install --upgrade awscli pytest
 
