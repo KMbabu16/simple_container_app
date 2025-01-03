@@ -40,7 +40,7 @@ Parameters:
 
   GitHubUser:
     Type: String
-    Default: kmbabu16
+    Default: KMbabu16
     Description: GitHub username or organization
     MinLength: 3
     MaxLength: 100
@@ -165,7 +165,7 @@ Resources:
 
       Handler: index.handler
       Role: !GetAtt CustomResourceLambdaExecutionRole.Arn
-      Runtime: python3.11
+      Runtime: python3.9
       Timeout: 300
 
   CustomResourceLambdaExecutionRole:
