@@ -16,9 +16,6 @@ RUN apt-get update \
     && curl -fsSL https://apt.corretto.aws/corretto.key | gpg --dearmor -o /usr/share/keyrings/corretto-keyring.gpg \
     && echo "deb [signed-by=/usr/share/keyrings/corretto-keyring.gpg] https://apt.corretto.aws stable main" > /etc/apt/sources.list.d/corretto.list \
     && apt-get update \
-    && apt-get -y install jq \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
 
 # Install Python dependencies from `requirements.txt`
 RUN pip install --no-cache-dir --upgrade pip \
