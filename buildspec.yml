@@ -28,9 +28,9 @@ phases:
       - echo "deb [signed-by=/usr/share/keyrings/corretto-keyring.gpg] https://apt.corretto.aws stable main" > /etc/apt/sources.list.d/corretto.list
       
       # Update apt-get and install jq and Python tools
-      - apt-get update
-      - apt-get -y install jq
-      - pip install --upgrade awscli pytest
+      #- apt-get update
+      #- apt-get -y install jq
+      #- pip install --upgrade awscli pytest
       
   pre_build:
     commands:
