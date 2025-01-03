@@ -59,7 +59,7 @@ def require_jwt(function):
 
 @APP.route('/', methods=['POST', 'GET'])
 def health():
-    return jsonify("Healthy application is up")
+    return jsonify("Healthy")
 
 
 @APP.route('/auth', methods=['POST'])
